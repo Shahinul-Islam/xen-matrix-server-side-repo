@@ -145,7 +145,6 @@ async function run() {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const result = await productsCollection.find(query).toArray();
-      console.log(result);
       res.send(result);
     });
 
