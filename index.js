@@ -171,7 +171,6 @@ async function run() {
         updateDoc,
         options
       );
-      console.log(result);
       res.send(result);
     });
 
