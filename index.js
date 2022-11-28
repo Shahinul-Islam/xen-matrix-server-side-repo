@@ -231,7 +231,6 @@ async function run() {
       const query = { email: email };
       const result = await usersCollection.deleteOne(query);
       res.send(result);
-      console.log(result);
     });
 
     //end of try block
