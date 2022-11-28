@@ -153,7 +153,6 @@ async function run() {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const result = await productsCollection.deleteOne(query);
-      console.log(result, query);
       res.send(result);
     });
 
