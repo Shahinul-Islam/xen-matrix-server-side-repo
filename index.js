@@ -126,22 +126,6 @@ async function run() {
       res.send(result);
     });
 
-    //make user admin
-    // app.put("/users/admin/:id", async (req, res) => {
-    //   const id = req.params.id;
-    //   const query = { _id: ObjectId(id) };
-    //   const options = { upsert: true };
-    //   // create a document that sets the plot of the movie
-    //   const updateDoc = {
-    //     $set: {
-    //       role: "Admin",
-    //     },
-    //   };
-    //   const result = await usersCollection.updateOne(query, updateDoc, options);
-    //   console.log(result);
-    //   res.send(result);
-    // });
-
     //get products by advertise value
 
     app.get("/advertise", async (req, res) => {
