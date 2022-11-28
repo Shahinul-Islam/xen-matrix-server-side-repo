@@ -196,19 +196,6 @@ async function run() {
       res.send(result);
     });
 
-    //get booking products under a buyer
-    //get user by email
-    /*  app.get("/booked", verifyJWT, async (req, res) => {
-      const buyerEmail = req.query.email;
-      const decodedEmail = req.decoded.email;
-      if (buyerEmail !== decodedEmail) {
-        res.status(403).send({ message: "forbidden access" });
-      }
-      const query = { email: buyerEmail };
-      const result = await bookingCollection.find(query).toArray();
-      res.send(result);
-    });
- */
     //get the specific seller's products
     app.get("/products", async (req, res) => {
       const sellerEmail = req.query.email;
