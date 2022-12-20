@@ -73,16 +73,16 @@ async function run() {
     // });
 
     //get user by email
-    // app.get("/booked", verifyJWT, async (req, res) => {
-    //   const buyerEmail = req.query.email;
-    //   const decodedEmail = req.decoded.email;
-    //   if (buyerEmail !== decodedEmail) {
-    //     return res.status(403).send({ message: "forbidden access" });
-    //   }
-    //   const query = { email: buyerEmail };
-    //   const result = await bookingCollection.find(query).toArray();
-    //   return res.send(result);
-    // });
+    app.get("/booked", async (req, res) => {
+      const buyerEmail = req.query.email;
+      // const decodedEmail = req.decoded.email;
+      // if (buyerEmail !== decodedEmail) {
+      //   return res.status(403).send({ message: "forbidden access" });
+      // }
+      const query = { email: buyerEmail };
+      const result = await bookingCollection.find(query).toArray();
+      return res.send(result);
+    });
 
     //token**********------********************//
 
